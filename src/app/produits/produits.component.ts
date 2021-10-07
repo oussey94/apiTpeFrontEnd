@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import{Produit} from '../model/produit.model';
 import{ProduitService} from '../services/produit.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class ProduitsComponent implements OnInit {
   produits : Produit[]; //tableau de produit
    
   //injection de dépendance
-  constructor(private produitService: ProduitService, private router: Router) {
+  constructor(private produitService: ProduitService, private router: Router, public authService: AuthService) {
 
     //this.produits=produitService.listProduits();
 

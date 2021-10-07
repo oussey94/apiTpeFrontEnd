@@ -30,7 +30,7 @@ export class UpdateProduitComponent implements OnInit {
     this.produitService.updateProduit(this.currentProduit);
     this.router.navigate(["produits"]);*/
     this.produitService.updateProduit(this.activatedRoute.snapshot.params.id,this.currentProduit).subscribe(prod => {
-      this.router.navigate(["produits"]);
+      this.router.navigate(["/produits"]);
     },
     (error) => { alert("Probléme lors de la modification !"); }
     );
